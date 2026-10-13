@@ -1,1 +1,274 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Trọng Tín - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #222;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #263b80, #1597bb);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 25px;
+        }
+
+        section h2 {
+            color: #263b80;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .project {
+            padding: 12px;
+            margin: 10px 0;
+            background: #edf5ff;
+            border-left: 4px solid #1597bb;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1597bb;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background: #263b80;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home" onclick="showPage('home')">Trang chủ</a>
+        <a href="#about" onclick="showPage('about')">Giới thiệu</a>
+        <a href="#contact" onclick="showPage('contact')">Liên hệ</a>
+    </nav>
+
+    <!-- TRANG CHỦ -->
+    <div id="home" class="page active">
+        <header>
+            <!-- Thay URL bên dưới bằng đường dẫn ảnh của bạn nếu muốn -->
+            <img
+                src="https://placehold.co/150x150/ffffff/263b80?text=Tin"
+                alt="Ảnh đại diện Lê Trọng Tín"
+                class="avatar">
+
+            <h1>Xin chào! Mình là Lê Trọng Tín</h1>
+            <p>Sinh viên Công nghệ thông tin</p>
+            <p>Đam mê lập trình web và khám phá công nghệ</p>
+
+            <a href="#about" class="button"
+               onclick="showPage('about')">Tìm hiểu về mình</a>
+        </header>
+
+        <section>
+            <h2>Dự án nổi bật</h2>
+
+            <div class="card">
+                <div class="project">
+                    <h3>Website Portfolio cá nhân</h3>
+                    <p>Trang web giới thiệu bản thân bằng HTML và CSS.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Bài tập JavaScript</h3>
+                    <p>Luyện tập xử lý dữ liệu và xây dựng chức năng web.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Website du lịch Trung Quốc</h3>
+                    <p>Giới thiệu những địa điểm du lịch nổi tiếng tại Trung Quốc.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TRANG GIỚI THIỆU -->
+    <div id="about" class="page">
+        <section>
+            <h2>Giới thiệu bản thân</h2>
+
+            <div class="card">
+                <p>Xin chào! Mình là Lê Trọng Tín, hiện là sinh viên đại học.</p>
+                <p>Mình đang học lập trình và tìm hiểu về thiết kế website.</p>
+                <p>Mục tiêu của mình là nâng cao kỹ năng HTML, CSS và JavaScript.</p>
+            </div>
+
+            <h2>Kỹ năng</h2>
+
+            <div class="card">
+                <p>HTML: Xây dựng cấu trúc trang web.</p>
+                <p>CSS: Thiết kế giao diện website.</p>
+                <p>JavaScript: Tạo tương tác cho trang web.</p>
+                <p>Tin học văn phòng: Word và PowerPoint.</p>
+            </div>
+
+            <h2>Sở thích</h2>
+
+            <div class="card">
+                <p>Nghe nhạc, khám phá công nghệ và học tiếng Trung.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- TRANG LIÊN HỆ -->
+    <div id="contact" class="page">
+        <section>
+            <h2>Liên hệ với mình</h2>
+
+            <div class="card">
+                <p><strong>Họ tên:</strong> Lê Trọng Tín</p>
+                <p><strong>Email:</strong> Bạn bổ sung email của mình tại đây.</p>
+                <p><strong>Lĩnh vực:</strong> Công nghệ thông tin và lập trình web.</p>
+
+                <h3 style="margin-top: 20px;">Gửi lời nhắn</h3>
+
+                <form id="contactForm">
+                    <p>
+                        <input type="text" id="name"
+                            placeholder="Nhập họ tên"
+                            required
+                            style="width:100%;padding:12px;margin:8px 0;">
+                    </p>
+
+                    <p>
+                        <textarea id="message"
+                            placeholder="Nhập lời nhắn"
+                            required
+                            style="width:100%;height:100px;padding:12px;margin:8px 0;"></textarea>
+                    </p>
+
+                    <button type="submit" class="button"
+                        style="border:0;cursor:pointer;">
+                        Gửi lời nhắn
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Lê Trọng Tín - Portfolio cá nhân</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('contactForm').addEventListener('submit',
+            function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+
+                alert('Cảm ơn ' + name + ' đã gửi lời nhắn!');
+
+                this.reset();
+            }
+        );
+    </script>
+
+</body>
+</html>
